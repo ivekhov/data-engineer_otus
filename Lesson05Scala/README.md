@@ -1,12 +1,22 @@
 How to start project on local machine 
-# on local machine command :
-# should be spark 3 veriosn in home directory
-# should be data-file .json in data catalogue https://storage.googleapis.com/otus_sample_data/winemag-data.json.tgz
-# should be compiled fat-jar by sbt assembly
+on local machine command :
+should be spark 3 version in home directory
+should be data-file .json in data catalogue https://storage.googleapis.com/otus_sample_data/winemag-data.json.tgz
+should be compiled fat-jar by sbt assembly
 
 ~/spark/spark-3.0.1-bin-hadoop2.7/bin/spark-submit --master local[*] --class JsonReader   ./target/scala-2.11/Lesson05Scala-assembly-0.1.jar ./data/winemag-data-130k-v2.json
 
 
+-----
+
+asciinema recording
+
+[![asciicast](https://asciinema.org/a/EoKBSfVkFOTU1VPiqrRE8sWLG.svg)](https://asciinema.org/a/EoKBSfVkFOTU1VPiqrRE8sWLG)
+
+----
+
+
+-----
 
 Как настроить проект в Idea
 
@@ -44,7 +54,7 @@ scala - sbt
 
 
 
-/// ПОДГОТОВКА К РАЗМЕЩЕНИЮ В ПРОДАКШЕНЕ НА КЛАСТЕРЕ
+ПОДГОТОВКА К РАЗМЕЩЕНИЮ В ПРОДАКШЕНЕ НА КЛАСТЕРЕ
 
 шаг 0 - предыстория в sbt shell> 
 	compile
@@ -61,4 +71,5 @@ scala - sbt
 
 ~/spark/spark-3.0.1-bin-hadoop2.7/bin/spark-submit --master local target/scala-2.11/scala_intro-assembly-0.1.jar
 
-//версия под 3 спарк - не работает
+(версия под 2 спарк на основе версии Java 1.8 - не работает, нужен спарк 3)
+
