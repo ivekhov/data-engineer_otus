@@ -68,6 +68,4 @@ object BostonCrimesMap extends App {
 
   districtOutput.coalesce(1).write.parquet(outputDirName)
 
-  districtOutput.coalesce(1).write.parquet()
-
 }
